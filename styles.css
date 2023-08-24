@@ -3,15 +3,30 @@ body {
 }
 
 /* Hint: What can you do with a media query and flexbox? */
-@media (max-width: 1250px) {
+/* TABLETS AND iPADS */
+@media(min-width:481px) and (max-width:1200px){
     .pricing-container{
-        flex-direction: column;
+        flex-direction: column;       
     }
     .pricing-plan{
-        flex-basis: 15rem;
-        width: 20rem;
+    flex-basis: 30%;
+    width: 40%;
     }
 }
+/* MOBILE PHONES */
+@media(min-width:319px) and (max-width:480px){
+    .pricing-container{
+        flex-direction: column;       
+    }
+    .pricing-plan{
+    flex-basis: 30%;
+    width: 80%;
+    }
+    .pricing-plan > *{
+        font-size: normal;
+    }
+}
+
 
 .pricing-container{
     display: flex;
@@ -27,11 +42,13 @@ body {
     justify-content: space-evenly;
     background-color: #f1f1f1;
     border-radius: 0.5rem;
-    flex-basis: 25rem;
-    height: 15rem;
+    flex-basis: 30%;
+    height: 30%;
+}
+.pricing-plan > *{
+    font-size: large;
 }
 .plan-title{
-    font-size: 1rem;
     font-weight: bold;
 }
 .plan-price{
@@ -45,9 +62,8 @@ body {
 }
 .plan-button{
     background-color: #ff6500;
-    border-radius: 0.3rem;
     border-color: #ff6500;
     color: white;
-    width: 7rem;
-    height: 1.5rem;
+    border-radius: 0.3rem;
+    width: 40%;
 }
